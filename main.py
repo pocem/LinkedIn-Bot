@@ -3,10 +3,16 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 import time
+from dotenv import load_dotenv
+import os
 
-ACCOUNT_EMAIL = "EMAIL"
-ACCOUNT_PASSWORD = "PASSWORD"
-PHONE = 91855283
+
+load_dotenv()
+
+# Access environment variables
+ACCOUNT_EMAIL = os.getenv("ACCOUNT_EMAIL")
+ACCOUNT_PASSWORD = os.getenv("ACCOUNT_PASSWORD")
+PHONE = os.getenv("PHONE")
 
 
 def abort_application():
